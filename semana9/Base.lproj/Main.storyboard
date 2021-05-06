@@ -1,24 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dQQ-6T-YgV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="semana9" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EE1-t7-4Bg">
+                                <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYj-z0-3Yb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tT-dN-JCB">
+                                <rect key="frame" x="181" y="290" width="52" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBY-a8-eJU">
+                                <rect key="frame" x="181" y="589.5" width="52" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EE1-t7-4Bg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7en-Xd-K7f"/>
+                            <constraint firstItem="EE1-t7-4Bg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Kgu-Eb-735"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EE1-t7-4Bg" secondAttribute="bottom" id="P0X-Dl-9KJ"/>
+                            <constraint firstItem="0tT-dN-JCB" firstAttribute="top" secondItem="uYj-z0-3Yb" secondAttribute="bottom" constant="30" id="PfQ-r0-wBz"/>
+                            <constraint firstItem="uYj-z0-3Yb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XRP-bp-7PE"/>
+                            <constraint firstItem="DBY-a8-eJU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XVR-t9-6kY"/>
+                            <constraint firstItem="uYj-z0-3Yb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YEa-tB-r2G"/>
+                            <constraint firstItem="EE1-t7-4Bg" firstAttribute="top" secondItem="DBY-a8-eJU" secondAttribute="bottom" constant="30" id="dWN-db-60R"/>
+                            <constraint firstItem="uYj-z0-3Yb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="glh-P7-TE6"/>
+                            <constraint firstItem="0tT-dN-JCB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jLa-Y7-k0V"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animePickerView" destination="uYj-z0-3Yb" id="YC3-Eq-GsR"/>
+                        <outlet property="anineLbl" destination="0tT-dN-JCB" id="G9W-ZC-cn4"/>
+                        <outlet property="countryLbl" destination="DBY-a8-eJU" id="xpO-wK-WHQ"/>
+                        <outlet property="countryPickerView" destination="EE1-t7-4Bg" id="M9t-uu-Hr3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1161" y="32"/>
+        </scene>
+        <!--Example Picker View Controller-->
+        <scene sceneID="Phn-D4-OlF">
+            <objects>
+                <viewController id="dQQ-6T-YgV" customClass="ExamplePickerViewController" customModule="semana9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UML-BG-62p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YiC-de-fSb">
+                                <rect key="frame" x="20" y="74" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O62-Dt-TOv">
+                                <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="56s-pQ-jlQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O62-Dt-TOv" firstAttribute="bottom" secondItem="56s-pQ-jlQ" secondAttribute="bottom" id="DNu-ip-gHy"/>
+                            <constraint firstItem="YiC-de-fSb" firstAttribute="top" secondItem="56s-pQ-jlQ" secondAttribute="top" constant="30" id="FsS-0L-251"/>
+                            <constraint firstItem="O62-Dt-TOv" firstAttribute="leading" secondItem="56s-pQ-jlQ" secondAttribute="leading" id="RXz-yW-Yg3"/>
+                            <constraint firstItem="56s-pQ-jlQ" firstAttribute="trailing" secondItem="YiC-de-fSb" secondAttribute="trailing" constant="20" id="kFI-j2-6QT"/>
+                            <constraint firstItem="YiC-de-fSb" firstAttribute="leading" secondItem="56s-pQ-jlQ" secondAttribute="leading" constant="20" id="ptq-mQ-ebd"/>
+                            <constraint firstItem="O62-Dt-TOv" firstAttribute="trailing" secondItem="56s-pQ-jlQ" secondAttribute="trailing" id="wD3-Tl-e4e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="comicPickerView" destination="O62-Dt-TOv" id="cxm-gL-U02"/>
+                        <outlet property="comicTxtField" destination="YiC-de-fSb" id="aDa-Su-2xW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pjJ-N0-uLS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-399" y="17"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
